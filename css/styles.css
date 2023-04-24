@@ -747,7 +747,8 @@ header {
     transition: transform 250ms var(--cubic);
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
     opacity: 1;
     transform: translateY(0);
 }
