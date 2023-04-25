@@ -687,7 +687,7 @@ header {
 .categories-button:focus {
     color: var(--primary-white-color);
     background-color: var(--pressed-color);
-    border: 1px solid var(--pressed-color);
+    border: var(--pressed-color);
     box-shadow: 
      0px 3px 1px rgba(0, 0, 0, 0.1),
      0px 2px 1px rgba(0, 0, 0, 0.08), 
@@ -844,7 +844,6 @@ header {
     opacity: 1;   
 
     transition: 
-    transform 250ms var(--cubic), 
     opacity 250ms var(--сubic), 
     visibility 250ms var(--сubic);
 }
@@ -856,11 +855,10 @@ header {
 }
 
 .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(1.2);
-}
+    }
 
 .modal {
     position: absolute;
@@ -875,14 +873,15 @@ header {
     border-radius: 4px;
 
     opacity: 1;
+    visibility: visible;
     
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) rotate(0) scale(1);
     
     transition: 
     opacity 250ms var(--cubic),
-    transform 250ms var(--cubic);
+    transform 250ms var(--cubic),
+    visibility 250ms var(--cubic);
 }
-
 .modal-btn {
     margin-top: 24px;
     margin-right: 24px;
