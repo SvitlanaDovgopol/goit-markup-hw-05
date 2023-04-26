@@ -852,6 +852,11 @@ header {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+
+    transition: 
+    opacity 250ms var(--cubic),
+    transform 250ms var(--cubic),
+    visibility 250ms var(--cubic);
 }
 
 .backdrop.is-hidden .modal {
